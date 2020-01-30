@@ -1,5 +1,3 @@
-## Buildahscript
-
 Buildahscript is a new container definition language built to be imperative and flexible.
 
 It allows you to do more with buildargs, create actually re-usable modules, and in general create more flexible containers.
