@@ -37,7 +37,7 @@ with container(f"python:3{dashvariant}") as cnt:
         "maintainer": "Jamie Bliss <jamie@ivyleav.es>",
     })
     
-    return cnt
+    return cnt.commit()
 ```
 
 ## License
