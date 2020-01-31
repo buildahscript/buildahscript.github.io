@@ -39,3 +39,9 @@ with container(f"python:3{dashvariant}") as cnt:
 ## License
 
 Buildahscript is made available publically under the [Prosperity License](https://prosperitylicense.com/). Commercial Licenses are available via [licensezero](https://licensezero.com/offers/6aeb69c8-088b-41c2-b6ef-e7327ded1b7b)
+
+## Projects
+
+{% for repository in site.github.public_repositories %}
+  * [{{ repository.name }}]({{ repository.html_url }})
+{% endfor %}
