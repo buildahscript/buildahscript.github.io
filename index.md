@@ -23,7 +23,11 @@ dashvariant = f"-{variant}" if variant else ""
 specifier = f"=={version}" if version else ""
 
 with container(f"python:3{dashvariant}") as cnt:
-    cnt.run(['pip', 'install', '--no-cache-dir', '--disable-pip-version-check', f'xonsh[linux]{specifier}'])
+    cnt.run([
+        'pip', 'install', '--no-cache-dir',
+        '--disable-pip-version-check',
+        f'xonsh[linux]{specifier}',
+    ])
     cnt.run('ln -s $(which xonsh) /usr/bin/xonsh', shell=True)
     
     cnt.command = ['/usr/bin/xonsh']
