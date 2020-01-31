@@ -10,6 +10,7 @@ Traditional Dockerfiles have limitations that can make it hard to express some t
 * Avoid spinning up entire containers just to download or transform some data
 * Avoid extra scripts to manipulate the context before building the image
 * Avoid generating Dockerfiles from scratch
+* Not lose track of buildargs
 
 ## What does it look like?
 
