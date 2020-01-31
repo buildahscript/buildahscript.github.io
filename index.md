@@ -47,5 +47,7 @@ Buildahscript is made available publically under the [Prosperity License](https:
 ## Projects
 
 {% for repository in site.github.public_repositories %}
-  * [{{ repository.name }}]({{ repository.html_url }})
+  {% if repository.name != ".github" %}
+  * [{{ repository.name }}]({{ repository.html_url }}): {{ repository.description }}
+  {% endif %}
 {% endfor %}
