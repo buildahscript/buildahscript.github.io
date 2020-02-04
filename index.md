@@ -41,6 +41,14 @@ with container(f"python:3{dashvariant}") as cnt:
     return cnt.commit()
 ```
 
+## Installation
+
+Simply install that `buildahscript` package with PIP (Python 3 version)
+
+```
+$ pip3 install --user buildahscript
+```
+
 ## License
 
 Buildahscript is made available publically under the [Prosperity License](https://prosperitylicense.com/). Commercial Licenses are available via [licensezero](https://licensezero.com/offers/6aeb69c8-088b-41c2-b6ef-e7327ded1b7b)
