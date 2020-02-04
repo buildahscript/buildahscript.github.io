@@ -43,11 +43,8 @@ with container(f"python:3{dashvariant}") as cnt:
 
 ## Installation
 
-Simply install that `buildahscript` package with PIP (Python 3 version)
-
-```
-$ pip3 install --user buildahscript
-```
+1. [Install Buildah](https://github.com/containers/buildah/blob/master/install.md)
+2. Install `buildahscript` with Pip (`$ pip3 install --user buildahscript`)
 
 ## License
 
