@@ -29,15 +29,16 @@ with container(f"python:3{dashvariant}") as cnt:
         '--disable-pip-version-check',
         f'xonsh[linux]{specifier}',
     ])
-    cnt.run('ln -s $(which xonsh) /usr/bin/xonsh', shell=True)
-    
+    with cnt.mount() as root:
+        (root / "usr" / "bin" / "xonsh").symlink_to('/usr/local/bin/xonsh')
+
     cnt.command = ['/usr/bin/xonsh']
     cnt.labels.update({
         "repository": "http://github.com/xonsh/container",
         "homepage": "https://xon.sh/",
         "maintainer": "Jamie Bliss <jamie@ivyleav.es>",
     })
-    
+
     return cnt.commit()
 ```
 
